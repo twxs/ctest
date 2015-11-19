@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-
+project(Project)
 add_executable(app test1.cpp)
 add_executable(app2 test2.cpp)
 
