@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0)
+
+add_executable(app test1.cpp)
+
+include(CTest)
+enable_testing()
+
+add_test(NAME test1 COMMAND app)
