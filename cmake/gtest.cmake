@@ -12,7 +12,7 @@ else()
   WORKING_DIRECTORY ${WORKING_DIR})
 endif()
 
-add_subdirectory(${WORKING_DIR}/googletest)
+add_subdirectory(${WORKING_DIR}/googletest ${WORKING_DIR}/googletest/build)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
