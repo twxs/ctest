@@ -3,7 +3,12 @@ cmake_minimum_required(VERSION 3.2)
 set(WORKING_DIR ${CMAKE_CURRENT_BINARY_DIR}/gtest)
 
 find_package(Git)
-set(gtest_force_shared_crt ON)
+
+option(
+  gtest_force_shared_crt
+  "Use shared (DLL) run-time lib even when Google Test is built as static lib."
+  ON)
+  
 if(NOT EXISTS "${WORKING_DIR}")
 	file(MAKE_DIRECTORY "${WORKING_DIR}")
 	execute_process(COMMAND ${GIT_EXECUTABLE} clone https://github.com/google/googletest.git ${WORKING_DIR})
