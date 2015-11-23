@@ -70,7 +70,7 @@ function(am_run_all_tests EXECUTABLE)
           else()
             add_test(
               "${GTEST_GROUP_NAME}.${GTEST_TEST_NAME}"
-              ${EXECUTABLE} --gtest_filter="${GTEST_GROUP_NAME}.${GTEST_TEST_NAME}"
+              ${EXECUTABLE} --gtest_filter=${GTEST_GROUP_NAME}.${GTEST_TEST_NAME}
             )
             #message("!!!!${GTEST_GROUP_NAME}.${GTEST_TEST_NAME} ${EXECUTABLE} --gtest_filter=${GTEST_GROUP_NAME}.${GTEST_TEST_NAME}")
           endif()
