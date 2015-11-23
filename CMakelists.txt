@@ -1,10 +1,17 @@
 cmake_minimum_required(VERSION 3.0)
 project(Project)
+
+include(cmake/gtest.cmake)
+
 add_executable(app test1.cpp)
+target_link_libraries(app gtest)
+
 add_executable(app2 test2.cpp)
 
 include(CTest)
 enable_testing()
 
-add_test(NAME test1 COMMAND app)
 add_test(NAME test2 COMMAND app2)
+
+
+am_run_all_tests(app test1.cpp)
